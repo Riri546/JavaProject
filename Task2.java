@@ -1,6 +1,7 @@
 // 1:32:50
 package Seminar1;
-import java.time.LocalTime;
+
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Task2 {
@@ -11,6 +12,19 @@ public class Task2 {
 // Считываем строку с консоли
         String name = iScanner.nextLine();
 // Форматированный вывод
-        System.out.print(LocalTime.now());
+
+        int hour = LocalDateTime.now().getHour();
+        String text = "";
+       
+                if ((hour >= 5) && (hour < 12)) text= "Доброе утро, ";
+                else if ((hour >= 12) && (hour < 18)) text= "Добрый день, ";
+                else if ((hour >= 18) && (hour < 23)) text= "Добрый вечер, ";
+                else text= "Доброй ночи, ";
+
+        
+
+        System.out.printf("%s %s", text, name);
+// Сканер надо закрыть 
+        iScanner.close();
     }
 }
