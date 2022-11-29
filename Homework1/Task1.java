@@ -14,23 +14,25 @@ public class Task1 {
         // Считываем строку с консоли
         int n = iScanner.nextInt();
         // Ответы пользователю по заданию
-        System.out.printf("Сумма от 1 до n равна %s\n", triangularNumber(n));
-        System.out.printf("Произведение от 1 до n равно %s", factorial(n));
+        System.out.printf("Треугольное число n = %s\n", triangularNumber(n));
+        System.out.printf("Факториал n = %s", factorial(n));
         iScanner.close();
     }
+
+    // Функция  складывает числа от 1 до n в соответсвии с заданием
     public static int triangularNumber(int number) {
         int sum = 0;
         for (int i = 1; i <= number; i++) {
             sum += i;
-
         }
         return sum;
     }    
+
+    // Функция умножает числа от 1 до n в соответсвии с условиями
     public static int factorial(int number) {
         int f = 1;
         for (int i = 1; i <= number; i++) {
             f *= i;
-            
         }
         return f;
     }    
