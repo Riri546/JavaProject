@@ -8,14 +8,14 @@ public class Task2 {
         // 1000, а не 999, указываю 1001
         for (int i = 1; i < 1001; i++) {
             // Условие для запуска работы функции и вывода ответа на печать
-            if (checkSimpleNumber(i) == true) {
+            if (searchPrimeNumbers(i) == true) {
                 System.out.println(i);
             }
         }
     }
 
     // Функция для поиска простых чисел
-    public static Boolean checkSimpleNumber(int number) {
+    public static Boolean searchPrimeNumbers(int number) {
         // цикл перебирает все числа от 1 до 1000
         for (int i = 2; i <= Math.sqrt(number); i++) {
             // Условие проверяет является ли число простым
