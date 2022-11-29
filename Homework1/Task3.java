@@ -6,13 +6,18 @@ import java.util.Scanner;
 
 public class Task3 {
     public static void main(String[] args) {
+        
+        System.out.println("Привет! Ты  попал в простой, классический калькулятор)))");
         Scanner scanner = new Scanner(System.in);
-        // один раз создали и пользуемся!
-        System.out.println("Enter the first number...");
+        // Ввод данных от пользователя
+        System.out.println("Введи первой число: ");
+        //Первое число
         int a = scanner.nextInt();
-        System.out.println("Enter the operator (+ - * /)...");
+        System.out.println("Какую операцию нужно произвести? Выбери оператор (+ - * /): ");
+        //Оператор
         char op = scanner.next().charAt(0);
-        System.out.println("Enter the second number...");
+        System.out.println("Введи второе число: ");
+        // Второе число
         int b = scanner.nextInt();
         switch (op) {
             case '+':
