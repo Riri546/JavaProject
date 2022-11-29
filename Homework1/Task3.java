@@ -19,10 +19,14 @@ public class Task3 {
         System.out.println("Введи второе число: ");
         // Второе число
         int b = scanner.nextInt();
-        switch (op) {
-            case '+':
+        
+            if (op == '+'){
                 System.out.println(a + " + " + b + " = " + add(a, b));
-                break;
+            } 
+            else if (op == '-'){
+                System.out.println(a + " - " + b + " = " + minus(a, b));
+            }   
+    
             case '-':
                 System.out.println(a + " - " + b + " = " + minus(a, b));
                 break;
