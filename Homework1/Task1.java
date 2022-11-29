@@ -14,11 +14,24 @@ public class Task1 {
         // Считываем строку с консоли
         int n = iScanner.nextInt();
         // Ответы пользователю по заданию
-        System.out.printf("Сумма от 1 до n равна %s\n", countNTriangle(n));
+        System.out.printf("Сумма от 1 до n равна %s\n", triangularNumber(n));
         System.out.printf("Произведение от 1 до n равно %s", factorial(n));
         iScanner.close();
-
-        // int[] arr = new int[];
-
     }
+    public static int triangularNumber(int number) {
+        int sum = 0;
+        for (int i = 1; i <= number; i++) {
+            sum += i;
+
+        }
+        return sum;
+    }    
+    public static int factorial(int number) {
+        int f = 1;
+        for (int i = 1; i <= number; i++) {
+            f *= i;
+            
+        }
+        return f;
+    }    
 }
