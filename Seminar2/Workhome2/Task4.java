@@ -34,7 +34,6 @@ public class Task4 {
     }
 
     public static void model(int res) {
-
         System.out.println("Привет! Ты  попал в простой, классический калькулятор)))");
         Scanner scanner = new Scanner(System.in);
         // Ввод данных от пользователя
