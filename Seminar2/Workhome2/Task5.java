@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 // 3. Реализовать простой калькулятор + - / * 
-public class Task4 {
+public class Task5 {
 
     private static File log;
     private static FileWriter fileWriter;
@@ -101,4 +101,3 @@ public class Task4 {
         }
     }
 }
-
