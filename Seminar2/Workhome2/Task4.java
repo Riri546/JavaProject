@@ -1,10 +1,39 @@
 package Seminar2.Workhome2;
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.Arrays;
 
 // 3. Реализовать простой калькулятор + - / * 
 public class Task4 {
-    
+
+    private static File log;
+    private static FileWriter fileWriter;
+
+    //Метод соания файла для логирования
     public static void main(String[] args) {
+        try {
+//Создаем файл
+            log = new File("calculatorLog.txt");
+            log.createNewFile();
+            fileWriter = new FileWriter(log);
+//Заводим данные для сортировки 
+            model(args);
+// Делаем проверку на сбои, что бы не возникало ошибок 
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                fileWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    public static void model(String[] args) {
 
         System.out.println("Привет! Ты  попал в простой, классический калькулятор)))");
         Scanner scanner = new Scanner(System.in);

@@ -22,6 +22,7 @@ public class Task2 {
             fileWriter = new FileWriter(log);
 //Заводим данные для сортировки 
             int[] mas = { 5, 15, 43, 84, 4, 24};
+//Запуск решения сортировки 
             bubbleSort(mas);
 // Делаем проверку на сбои, что бы не возникало ошибок 
         } catch (IOException e) {
