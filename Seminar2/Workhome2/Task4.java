@@ -4,8 +4,6 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.Timestamp;
-
 
 // 3. Реализовать простой калькулятор + - / * 
 public class Task4 {
@@ -14,14 +12,16 @@ public class Task4 {
     private static FileWriter fileWriter;
 
     // Метод соания файла для логирования
-    public static void main(String[] args) {
+    public static void main(int result) {
         try {
             // Создаем файл
             log = new File("calculatorLog.txt");
             log.createNewFile();
             fileWriter = new FileWriter(log);
             // Заводим данные для сортировки
-            // model(arg);
+
+            model(result);
+            logStep(result);
             // Делаем проверку на сбои, что бы не возникало ошибок
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,7 +34,7 @@ public class Task4 {
         }
     }
 
-    public static void model(String[] arg) {
+    public static void model(int res) {
 
         System.out.println("Привет! Ты  попал в простой, классический калькулятор)))");
         Scanner scanner = new Scanner(System.in);
@@ -48,8 +48,7 @@ public class Task4 {
         System.out.print("Введи второе число: ");
         // Второе число
         int b = scanner.nextInt();
-        int res;
-        
+
         // Проверка на то какой оператор и вывод решения
         if (op == '+') {
             res = add(a, b);
@@ -67,7 +66,6 @@ public class Task4 {
             System.out.println("Не верно введен оператор(((");
         }
         scanner.close();
-        
     }
 
     // Функция для сложения
@@ -103,4 +101,5 @@ public class Task4 {
             e.printStackTrace();
         }
     }
+
 }
