@@ -66,5 +66,6 @@ public class Task2 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }}
+    }
+}
 

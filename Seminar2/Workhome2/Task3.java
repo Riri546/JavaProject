@@ -29,14 +29,18 @@ public class Task3 {
 //Разделяем строку по знаку запятой, что бы оставить чистые данные        
         String[] parts = newJSON.split(",");        
         for (String part : parts){        
-//??????
             String[] params = part.split(":");  
-
+//В соответствии с фамилией подтягиваются данные об оценке, а также подтягивается предмет 
             if("фамилия".equals(params[0].trim())) 
             {                
                 sb = new StringBuilder(ELEMENT1).append(params[1]);            
             }            else if("оценка".equals(params[0].trim())) sb.append(ELEMENT2).append(params[1]);            
             else if("предмет".equals(params[0].trim())) {                
-                sb.append(ELEMENT3).append(params[1]);                
-                System.out.println(sb);            }        }    }}
+                sb.append(ELEMENT3).append(params[1]);
+//Выводим на печать                 
+                System.out.println(sb);            
+            }        
+        }    
+    }
+}
 
