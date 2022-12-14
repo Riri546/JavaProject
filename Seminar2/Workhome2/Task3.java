@@ -15,20 +15,23 @@
 package Seminar2.Workhome2;
 
 public class Task3 {
-
+//Задаем строку формата JSON
     private static final String JSON = "[{\"фамилия\":\"Иванов\",\"оценка\":\"5\",\"предмет\":\"Математика\"}," +            
     "{\"фамилия\":\"Петрова\",\"оценка\":\"4\",\"предмет\":\"Информатика\"}," +            
-    "{\"фамилия\":\"Краснов\",\"оценка\":\"5\",\"предмет\":\"Физика\"}]";    
+    "{\"фамилия\":\"Краснов\",\"оценка\":\"5\",\"предмет\":\"Физика\"}]";  
+//Добавляем элементы, которые в дальнейшем будут скрепляться с данными строки JSON  
     private static final String ELEMENT1 = "Студент ";    
     private static final String ELEMENT2 = " получил ";    
     private static final String ELEMENT3 = " по предмету ";    
     public static void main(String[] args) {        
         StringBuilder sb = new StringBuilder();        
         String newJSON = JSON.replaceAll("\\{", "").replaceAll("\\}", "").replaceAll("\"", "").replace('[', ' ').replace(']', ' ');        
-        //System.out.println(newJSON);        
+//Разделяем строку по знаку запятой, что бы оставить чистые данные        
         String[] parts = newJSON.split(",");        
-        for (String part : parts){            
-            String[] params = part.split(":");            
+        for (String part : parts){        
+//??  
+            String[] params = part.split(":");  
+
             if("фамилия".equals(params[0].trim())) 
             {                
                 sb = new StringBuilder(ELEMENT1).append(params[1]);            
