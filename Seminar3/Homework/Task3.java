@@ -1,46 +1,31 @@
-// 2. Задан целочисленный список ArrayList. Найти минимальное,
-// максимальное и среднее из этого списка.
-// 2. Задан целочисленный список ArrayList. Найти минимальное,
-// максимальное и среднее из этого списка.
+// Задание 3. Задан целочисленный список ArrayList. Найти минимальное, максимальное и среднее из этого списка.
+
 package Seminar3.Homework;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.ArrayList;
-import java.util.Random;
-
-import staticjava.lang.Math.round;
-import staticjava.util.Collections.max;
-import staticjava.util.Collections.min;
 
 public class Task3 {
-   
+    //Метол находит максимальное, минимальное и среднее число 
     public static void main(String[] args) {
-        Random rnd = new Random();
-        ArrayList<Integer> list1 = new ArrayList<Integer>();
-        for (int i = 0; i < 10; i++) {
-            int val = rnd.nextInt(-100, 100);
-            list1.add(val);
+        //Объявляем списак 
+        ArrayList<Integer> ints = new ArrayList<>(Arrays.asList(15, 545, 16, 36 , 45, 75, 31));
+        Collections.sort(ints);
+        //Печать списка 
+        System.out.println("Список: " + ints);
+        //Поиск и печать максимального числа 
+        System.out.println("Максимальное число = " + ints.get(0));
+        //Поиск и печать минимального числа
+        System.out.println("Минимальное число =  " + ints.get(ints.size() - 1));
+        //Буферная переменная
+        int sum = 0;
+        //Цикл для поиска суммы всех чисел массива 
+        for (int i : ints) {
+            sum += i;
         }
-        System.out.printf("Первоначальный список %s\n", list1);
-        int max = max(list1);
-        int min = min(list1);
-        int maxItem = list1.get(0);
-        int minItem = list1.get(0);
-        int sumItems = 0;
-        for (int item : list1) {
-            if (item > maxItem) {
-                maxItem = item;
-            }
-            if (item < minItem) {
-                minItem = item;
-            }
-            sumItems += item;
-        }
-        float average = (float) sumItems / list1.size();
-        System.out.printf("Максимальный элемент при помощи max %s\n", max);
-        System.out.printf("Максимальный элемент %s\n", maxItem);
-        System.out.printf("Минимальный элемент при помощи min %s\n", min);
-        System.out.printf("Минимальный элемент %s\n", minItem);
-        System.out.printf("Сумма элементов %s\n", sumItems);
-        System.out.printf("Среднее арифметическое %s\n", average);
+        //Поиск среднего числа с помощью суммы, которую мы получили в цикле и деления этой суммы на дляну массива, 
+        //а так же печать 
+        System.out.println("Среднее число =  " + sum / ints.size());
     }
 }
