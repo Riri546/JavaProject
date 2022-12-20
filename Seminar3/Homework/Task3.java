@@ -1,5 +1,4 @@
 // Задание 3. Задан целочисленный список ArrayList. Найти минимальное, максимальное и среднее из этого списка.
-
 package Seminar3.Homework;
 
 import java.util.Arrays;

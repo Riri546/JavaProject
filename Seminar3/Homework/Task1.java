@@ -1,3 +1,4 @@
+// Задание 1. Реализовать алгоритм сортировки слиянием
 package Seminar3.Homework;
 
 import java.util.Arrays;
