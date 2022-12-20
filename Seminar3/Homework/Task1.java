@@ -42,7 +42,7 @@ public class Task1 {
         return result;
     }
 
-    // Задаем условия и активируем работу мутодов, ну и выводим на печать 
+    // Задаем условия и активируем работу мутодов, ну и выводим на печать
     public static void main(String args[]) {
         int[] sortArr = { 20, 55, 111, 7, 13 };
         int[] result = mergeSort(sortArr);
