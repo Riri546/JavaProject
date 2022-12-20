@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Task2 {
-    public class Task001 {
         public static void main(String[] args) {
             Random rnd = new Random();
             ArrayList<Integer> list1 = new ArrayList<Integer>();
@@ -25,4 +24,3 @@ public class Task2 {
             System.out.printf("Список с удаленными четными числами %s", list1);
         }
     }
-}
