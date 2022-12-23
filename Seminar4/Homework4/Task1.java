@@ -16,6 +16,7 @@ public class Task1 {
         for (Integer temp : listMas) {
             linkList.add(temp);
         }
+        System.out.println("Исходный массив: " + linkList);
 
         int temp = 0;
         //Заполняем массив в обратном порядке 
@@ -24,6 +25,6 @@ public class Task1 {
             linkList.removeFirst();
             temp++;
         }
-        System.out.println("linkList = " + linkList);
+        System.out.println("Перевернутый массив: " + linkList);
     }
 }

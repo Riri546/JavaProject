@@ -9,23 +9,25 @@ import java.util.LinkedList;
 
 public class Task2 {
     public static void main(String[] args) {
-        //Задаем массив
-        int[] list = { 1, 5, 4, 46, 9, 7, 8 ,74 ,8 };
-        //Создаем массив, класса linkList и заполняем исходным
+        // Задаем массив
+        int[] list = { 1, 5, 4, 46, 9, 7, 8, 74, 8 };
+        // Создаем массив, класса linkList и заполняем исходным
         LinkedList<Integer> linkList = new LinkedList<>();
         for (Integer temp : list) {
             linkList.add(temp);
         }
+        // Выаодим исходный массив
+        System.out.println("Исходный массив: " + linkList);
 
-        System.out.println(linkList);
+        enqueue(linkList, 555);
+        System.out.println("Помещаем в конец очереди элеммент '555': " + linkList);
 
-        enqueue(linkList, 9);
-        System.out.println(linkList);
+        dequeue(linkList);
+        // System.out.println(dequeue(linkList));
+        System.out.println("Возвращаем первый элемент из очереди и удаляет его: " + linkList);
 
-        System.out.println(dequeue(linkList));
-        System.out.println(linkList);
-
-        System.out.println(first(linkList));
+        first(linkList);
+        System.out.println("Возвращаем первый элемент из очереди, не удаляя: " + linkList);
     }
 
     public static void enqueue(LinkedList<Integer> list, int num) {
@@ -45,4 +47,3 @@ public class Task2 {
         return num;
     }
 }
-
