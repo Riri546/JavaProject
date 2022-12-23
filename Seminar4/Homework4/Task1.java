@@ -9,7 +9,7 @@ public class Task1 {
     public static void main(String[] args) {
         //Задаем массив 
         int[] listMas = { 15, 55, 98, 24, 25, 1 };
-        //И дополнительно создаем пустой массив 
+        //Создаем массив, класса linkList
         LinkedList<Integer> linkList = new LinkedList<>();
 
         //Заполняем пустой массив 
