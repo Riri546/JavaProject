@@ -1,5 +1,6 @@
 // 1. Пусть дан LinkedList с несколькими элементами. 
 // Реализуйте метод, который вернет “перевернутый” список.
+
 package Seminar4.Homework4;
 
 import java.util.LinkedList;
