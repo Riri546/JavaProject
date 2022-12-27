@@ -45,7 +45,9 @@ public class Task2 {
                 "Иван Мечников " +
                 "Петр Петин " +
                 "Иван Ежов ";
+
         String[] listOfNamesAndSurnames = employees.split(" ");
+
         for (int i = 0; i < listOfNamesAndSurnames.length; i += 2) {
             if (nameMap.containsKey(listOfNamesAndSurnames[i])) {
                 nameMap.replace(listOfNamesAndSurnames[i], nameMap.get(listOfNamesAndSurnames[i]) + 1);
@@ -53,14 +55,17 @@ public class Task2 {
                 nameMap.put(listOfNamesAndSurnames[i], 1);
             }
         }
+
         System.out.println(nameMap);
         Map<String, Integer> sortedNameMap = new LinkedHashMap<>();
         int max = 1;
+
         for (int value : nameMap.values()) {
             if (value > max) {
                 max = value;
             }
         }
+
         for (int i = max; i > 0; i--) {
             for (Map.Entry<String, Integer> entry : nameMap.entrySet()) {
                 String key = entry.getKey();
@@ -69,7 +74,7 @@ public class Task2 {
                 }
             }
         }
+        
         System.out.println(sortedNameMap);
     }
 }
-    
