@@ -1,4 +1,4 @@
-// Реализуйте структуру телефонной книги с помощью HashMap,
+// 1. Реализуйте структуру телефонной книги с помощью HashMap,
 // учитывая, что 1 человек может иметь несколько телефонов.
 
 package Seminar5.Homework;
@@ -12,9 +12,10 @@ public class Task1 {
     public static HashMap<String, List<String>> phoneBook = new HashMap<>();
 
     public static void main(String[] args) {
-    // Scanner scanner = new Scanner(System.in);
-    // System.out.println("Введите фамилию с большой буквы и я покажу вам номера телефонов этого абонента");
-    // String sname = scanner.next();
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("Введите фамилию с большой буквы и я покажу вам номера
+        // телефонов этого абонента");
+        // String sname = scanner.next();
         addInPhoneBook();
         // findInPhoneBook(sname);
         findInPhoneBook("Колесникова");
@@ -29,7 +30,6 @@ public class Task1 {
         phoneBook.put("Сидоров", List.of("+7(599)556-56-55", "+7(666)666-66-66"));
         phoneBook.put("Берестова", List.of("+7(555)555-55-55", "+7(666)666-66-66"));
         phoneBook.put("Косова", List.of("+7(555)555-55-55", "+7(666)666-66-66"));
-
     }
 
     public static void findInPhoneBook(String surname) {
